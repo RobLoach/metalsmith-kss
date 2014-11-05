@@ -1,0 +1,26 @@
+{
+  "name": "metalsmith-kss",
+  "version": "0.0.0",
+  "description": "A Metalsmith plugin to add KSS output.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kwizzn/metalsmith-kss.git"
+  },
+  "author": "Christian Neuhäuser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwizzn/metalsmith-kss/issues"
+  },
+  "homepage": "https://github.com/kwizzn/metalsmith-kss",
+  "dependencies": {
+    "kss": "^1.2.0",
+    "debug": "~0.7.4"
+  },
+  "devDependencies": {
+    "metalsmith": "0.x"
+  }
+}
