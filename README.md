@@ -3,6 +3,13 @@
 
   A Metalsmith plugin to create KSS documentation.
 
+  **Disclaimer: This is work in progress! Things left to:**
+
+  - Cleanup
+  - Configuration
+  - Tests
+  - Documentation
+
 ## Installation
 
     $ npm install metalsmith-kss
@@ -36,3 +43,4 @@ metalsmith.use(kss({
 ## License
 
   MIT
+
