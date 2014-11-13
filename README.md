@@ -3,10 +3,6 @@
 
   A Metalsmith plugin to create KSS documentation.
 
-  **Disclaimer: This is work in progress! Things left to do:**
-
-  - Tests
-
 ## Installation
 
     $ npm install metalsmith-kss
