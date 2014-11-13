@@ -5,9 +5,7 @@
 
   **Disclaimer: This is work in progress! Things left to do:**
 
-  - Templates
   - Tests
-  - Documentation
 
 ## Installation
 
@@ -37,7 +35,8 @@ var kss = require('metalsmith-kss');
 metalsmith.use(kss({
   source: 'less/',
   target: 'styleguide/',
-  template: 'page.html',
+  template: 'custom-kss.html'
+  pageTemplate: 'page.html',
   options: {
     mask : '*.less|*.css',
     markdown  : true,
