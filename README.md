@@ -5,8 +5,7 @@
 
   **Disclaimer: This is work in progress! Things left to:**
 
-  - Cleanup
-  - Configuration
+  - Templates
   - Tests
   - Documentation
 
@@ -36,7 +35,15 @@
 var kss = require('metalsmith-kss');
 
 metalsmith.use(kss({
-  // ...
+  source: 'less/',
+  target: 'styleguide/',
+  template: 'page.html',
+  options: {
+    mask : '*.less|*.css',
+    markdown  : true,
+    multiline: false,
+    typos: false
+  }
 }));
 ```
 
