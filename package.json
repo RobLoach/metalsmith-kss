@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "assert": "^1.1.2",
+    "assert-dir-equal": "^1.0.1",
     "mocha": "^2.0.1"
   }
 }
