@@ -1,15 +1,15 @@
-<p>{{{description}}}</p>
+<div class="description">{{{description}}}</div>
 
 <h5>Markup</h5>
-<p>{{{markup}}}</p>
+<div class="markup">{{{markup}}}</div>
 
 {{#if modifiers}}
-<ul>
+  <ul>
     {{#each modifiers}}
     <li>
-        {{name}}<br>
-        {{{description}}}
+      {{name}}<br>
+      {{{description}}}
     </li>
     {{/each}}
-</ul>
+  </ul>
 {{/if}}
