@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/kwizzn/metalsmith-kss",
   "dependencies": {
-    "kss": "^1.2.0",
-    "debug": "~0.7.4"
+    "debug": "~0.7.4",
+    "handlebars": "^2.0.0",
+    "kss": "^1.2.0"
   },
   "devDependencies": {
     "metalsmith": "0.x"
