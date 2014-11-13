@@ -3,7 +3,7 @@
 
   A Metalsmith plugin to create KSS documentation.
 
-  **Disclaimer: This is work in progress! Things left to:**
+  **Disclaimer: This is work in progress! Things left to do:**
 
   - Templates
   - Tests
