@@ -3,6 +3,10 @@
 
   A Metalsmith plugin to create KSS documentation.
 
+## Status
+
+  [![Travis Build Status](https://travis-ci.org/kwizzn/metalsmith-kss.svg?branch=master)](https://travis-ci.org/kwizzn/metalsmith-kss)
+
 ## Installation
 
     $ npm install metalsmith-kss
