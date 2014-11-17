@@ -1,51 +1,53 @@
-{{#if description}}
-  <section class="description">
-    {{{description}}}
-  </section>
-{{/if}}
+<article class="{{#if deprecated}}deprecated{{/if}} {{#if experimental}}experimental{{/if}}">
+  {{#if description}}
+    <section class="description">
+      {{{description}}}
+    </section>
+  {{/if}}
 
-{{#if markup}}
-  <section class="markup">
-    <h5>Markup</h5>
-    <pre><code>{{markup}}</code></pre>
-  </section>
-{{/if}}
+  {{#if markup}}
+    <section class="markup">
+      <h5>Markup</h5>
+      <pre><code>{{markup}}</code></pre>
+    </section>
+  {{/if}}
 
-{{#if markup}}
-  <section class="example">
-    <h5>Example</h5>
-    <div>{{{markup}}}</div>
-  </section>
-{{/if}}
+  {{#if markup}}
+    <section class="example">
+      <h5>Example</h5>
+      <div>{{{markup}}}</div>
+    </section>
+  {{/if}}
 
-{{#if modifiers}}
-  <h5>Modifiers</h5>
-  <section class="modifiers">
-    <dl>
-      {{#each modifiers}}
-      <dt>{{name}}{{#if className}} (<code>{{{className}}}</code>){{/if}}</dt>
-      <dd>
-        {{#if description}}
-          <div class="description">
-            {{{description}}}
-          </div>
-        {{/if}}
+  {{#if modifiers}}
+    <h5>Modifiers</h5>
+    <section class="modifiers">
+      <dl>
+        {{#each modifiers}}
+        <dt>{{name}}{{#if className}} (<code>{{{className}}}</code>){{/if}}</dt>
+        <dd>
+          {{#if description}}
+            <div class="description">
+              {{{description}}}
+            </div>
+          {{/if}}
 
-        {{#if markup}}
-          <div class="markup">
-            <h5>Markup</h5>
-            <pre><code>{{markup}}</code></pre>
-          </div>
-        {{/if}}
+          {{#if markup}}
+            <div class="markup">
+              <h5>Markup</h5>
+              <pre><code>{{markup}}</code></pre>
+            </div>
+          {{/if}}
 
-        {{#if markup}}
-          <div class="example">
-            <h5>Example</h5>
-            <div>{{{markup}}}</div>
-          </div>
-        {{/if}}
-      </dd>
-      {{/each}}
-    </dl>
-  </section>
-{{/if}}
+          {{#if markup}}
+            <div class="example">
+              <h5>Example</h5>
+              <div>{{{markup}}}</div>
+            </div>
+          {{/if}}
+        </dd>
+        {{/each}}
+      </dl>
+    </section>
+  {{/if}}
+</article>
