@@ -1,23 +1,71 @@
-<div class="description"><p>Lorem ipsum dolor sit amet</p>
-</div>
+  <section class="description">
+    <p>Lorem ipsum dolor sit amet</p>
 
-<h5>Markup</h5>
-<div class="markup"><input type="text" class="{$modifiers}"></div>
+  </section>
 
-  <ul>
-    <li>
-      :hover<br>
-      <p>Hover style</p>
+  <section class="markup">
+    <h5>Markup</h5>
+    <pre><code>&lt;input type=&quot;text&quot; class=&quot;{$modifiers}&quot;&gt;</code></pre>
+  </section>
 
-    </li>
-    <li>
-      :focus<br>
-      <p>Focus style</p>
+  <section class="example">
+    <h5>Example</h5>
+    <div><input type="text" class="{$modifiers}"></div>
+  </section>
 
-    </li>
-    <li>
-      :disabled<br>
-      <p>Disabled style</p>
+  <h5>Modifiers</h5>
+  <section class="modifiers">
+    <dl>
+      <dt>:hover (<code>pseudo-class-hover</code>)</dt>
+      <dd>
+          <div class="description">
+            <p>Hover style</p>
 
-    </li>
-  </ul>
+          </div>
+
+          <div class="markup">
+            <h5>Markup</h5>
+            <pre><code>&lt;input type=&quot;text&quot; class=&quot;pseudo-class-hover&quot;&gt;</code></pre>
+          </div>
+
+          <div class="example">
+            <h5>Example</h5>
+            <div><input type="text" class="pseudo-class-hover"></div>
+          </div>
+      </dd>
+      <dt>:focus (<code>pseudo-class-focus</code>)</dt>
+      <dd>
+          <div class="description">
+            <p>Focus style</p>
+
+          </div>
+
+          <div class="markup">
+            <h5>Markup</h5>
+            <pre><code>&lt;input type=&quot;text&quot; class=&quot;pseudo-class-focus&quot;&gt;</code></pre>
+          </div>
+
+          <div class="example">
+            <h5>Example</h5>
+            <div><input type="text" class="pseudo-class-focus"></div>
+          </div>
+      </dd>
+      <dt>:disabled (<code>pseudo-class-disabled</code>)</dt>
+      <dd>
+          <div class="description">
+            <p>Disabled style</p>
+
+          </div>
+
+          <div class="markup">
+            <h5>Markup</h5>
+            <pre><code>&lt;input type=&quot;text&quot; class=&quot;pseudo-class-disabled&quot;&gt;</code></pre>
+          </div>
+
+          <div class="example">
+            <h5>Example</h5>
+            <div><input type="text" class="pseudo-class-disabled"></div>
+          </div>
+      </dd>
+    </dl>
+  </section>

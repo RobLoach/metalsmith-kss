@@ -1,15 +1,51 @@
-<div class="description">{{{description}}}</div>
+{{#if description}}
+  <section class="description">
+    {{{description}}}
+  </section>
+{{/if}}
 
-<h5>Markup</h5>
-<div class="markup">{{{markup}}}</div>
+{{#if markup}}
+  <section class="markup">
+    <h5>Markup</h5>
+    <pre><code>{{markup}}</code></pre>
+  </section>
+{{/if}}
+
+{{#if markup}}
+  <section class="example">
+    <h5>Example</h5>
+    <div>{{{markup}}}</div>
+  </section>
+{{/if}}
 
 {{#if modifiers}}
-  <ul>
-    {{#each modifiers}}
-    <li>
-      {{name}}<br>
-      {{{description}}}
-    </li>
-    {{/each}}
-  </ul>
+  <h5>Modifiers</h5>
+  <section class="modifiers">
+    <dl>
+      {{#each modifiers}}
+      <dt>{{name}}{{#if className}} (<code>{{{className}}}</code>){{/if}}</dt>
+      <dd>
+        {{#if description}}
+          <div class="description">
+            {{{description}}}
+          </div>
+        {{/if}}
+
+        {{#if markup}}
+          <div class="markup">
+            <h5>Markup</h5>
+            <pre><code>{{markup}}</code></pre>
+          </div>
+        {{/if}}
+
+        {{#if markup}}
+          <div class="example">
+            <h5>Example</h5>
+            <div>{{{markup}}}</div>
+          </div>
+        {{/if}}
+      </dd>
+      {{/each}}
+    </dl>
+  </section>
 {{/if}}
