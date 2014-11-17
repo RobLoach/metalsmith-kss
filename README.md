@@ -33,11 +33,13 @@
 var kss = require('metalsmith-kss');
 
 metalsmith.use(kss({
-  source: 'less/',
-  target: 'styleguide/',
-  template: 'custom-kss.html'
-  pageTemplate: 'page.html',
-  options: {
+  source: 'css/',              // Required: Where to look for KSS-documented CSS files
+  target: 'styleguide/',       // Required: Where to store the output files.
+  sectionQuery: '2.x.x',       // Optional: Query to pass to the KSS section() method. Default: none
+  template: 'custom-kss.html', // Optional: Path to custom (Handlebars) template. Default: './templates/kss.hbs'
+  pageTemplate: 'page.html',   // Optional: Path to custom (Handlebars) page template. Default: none
+  flatten: false,              // Optional: Whether to flatten the KSS section hierarchy. Default: false
+  options: {                   // Optional: Options to pass to the KSS traverse() method. Default: {}
     mask : '*.less|*.css',
     markdown  : true,
     multiline: false,
@@ -49,4 +51,3 @@ metalsmith.use(kss({
 ## License
 
   MIT
-
