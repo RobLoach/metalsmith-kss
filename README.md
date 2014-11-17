@@ -39,6 +39,7 @@ metalsmith.use(kss({
   template: 'custom-kss.html', // Optional: Path to custom (Handlebars) template. Default: './templates/kss.hbs'
   pageTemplate: 'page.html',   // Optional: Path to custom (Handlebars) page template. Default: none
   flatten: false,              // Optional: Whether to flatten the KSS section hierarchy. Default: false
+  fixtures: glob('**/*.hbs')   // Optional: Provide a glob with external fixtures. Default: none
   options: {                   // Optional: Options to pass to the KSS traverse() method. Default: {}
     mask : '*.less|*.css',
     markdown  : true,
@@ -47,6 +48,32 @@ metalsmith.use(kss({
   }
 }));
 ```
+
+## External fixtures
+
+  KSS lacks the ability to include external fixtures in the markup section. Here is how to work around this:
+  Say, you have an external HTML fixture in your site that you like to appear in the markup section of your
+  KSS styleguide so you don't have to do updates twice.
+
+  1. In your KSS, put the following in the according markup section:
+
+  ```css
+  // Styleguide x
+  //
+  // ...
+  //
+  // Markup: {{> path/to/external_fixture.hbs}}
+  ```
+
+  2. In your metalsmith build file, add a [glob](https://www.npmjs.org/package/glob) of all fixture files
+    that you need to be available to KSS:
+
+  ```js
+  metalsmith(__dirname)
+      .clean(true)
+      .metadata(meta)
+      .use(kss({ source: 'less/', target: 'styleguide/', pageTemplate: 'page.html', fixtures: glob.sync('less/**/*.hbs') }))
+  ```
 
 ## License
 
