@@ -1,4 +1,10 @@
 <article class="{{#if deprecated}}deprecated{{/if}} {{#if experimental}}experimental{{/if}}">
+  {{#if reference}}
+    <h{{headerDepth}}>
+      {{reference}} {{header}}
+    </h{{headerDepth}}>
+  {{/if}}
+
   {{#if description}}
     <section class="description">
       {{{description}}}
