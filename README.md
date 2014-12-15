@@ -76,6 +76,10 @@ metalsmith.use(kss({
       .use(kss({ source: 'less/', target: 'styleguide/', pageTemplate: 'page.html', fixtures: glob.sync('less/**/*.hbs') }))
   ```
 
+## TODOs
+
+  - Allow other template engines
+
 ## License
 
   MIT
