@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-kss",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A Metalsmith plugin to add KSS output.",
   "main": "lib/index.js",
   "scripts": {
