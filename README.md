@@ -36,6 +36,7 @@ metalsmith.use(kss({
   source: 'css/',              // Required: Where to look for KSS-documented CSS files
   target: 'styleguide/',       // Required: Where to store the output files.
   sectionQuery: '2.x.x',       // Optional: Query to pass to the KSS section() method. Default: none
+  maxDepth: 1,                 // Optional: Section level at which to start adding content to the parent. Default: none
   template: 'custom-kss.html', // Optional: Path to custom (Handlebars) template. Default: './templates/kss.hbs'
   pageTemplate: 'page.html',   // Optional: Path to custom (Handlebars) page template. Default: none
   flatten: false,              // Optional: Whether to flatten the KSS section hierarchy. Default: false
