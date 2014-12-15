@@ -22,7 +22,7 @@ describe('metalsmith-kss', function(){
       .use(kss({
         source: 'test/fixtures/external-fixture/css/',
         target: './',
-        fixtures: glob.sync('test/fixtures/external-fixture/fixtures/**/*.html')
+        fixtures: { 'path/to/fixture': '<p>Crazy external markup</p>' }
       }))
       .build(function(err){
         if (err) return done(err);
