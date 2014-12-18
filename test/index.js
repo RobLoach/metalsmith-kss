@@ -1,4 +1,5 @@
 var equal = require('assert-dir-equal');
+var assert = require('assert');
 var Metalsmith = require('metalsmith');
 var kss = require('..');
 var glob = require('glob');
@@ -36,12 +37,24 @@ describe('metalsmith-kss', function(){
       .use(kss({
         source: 'test/fixtures/max-depth/css/',
         target: './',
-        maxDepth: 2,
-        fixtures: glob.sync('test/fixtures/max-depth/fixtures/**/*.html')
+        maxDepth: 2
       }))
       .build(function(err){
         if (err) return done(err);
         equal('test/fixtures/max-depth/expected', 'test/fixtures/max-depth/build');
+        done();
+      });
+  });
+
+  it('should warn if orphaned sections are found', function(done){
+   Metalsmith('test/fixtures/orphaned-section')
+      .use(kss({
+        source: 'test/fixtures/orphaned-section/css/',
+        target: './',
+        maxDepth: 1
+      }))
+      .build(function(err){
+        assert(err);
         done();
       });
   });
