@@ -12,17 +12,17 @@
   {{/if}}
 
   {{#if markup}}
-    <section class="markup">
-      <h5>Markup</h5>
-      <pre><code>{{markup}}</code></pre>
-    </section>
-  {{/if}}
-
-  {{#if markup}}
     <section class="example">
       <h5>Example</h5>
       <div>{{{markup}}}</div>
     </section>
+  {{/if}}
+
+  {{#if markup}}
+      <section class="markup">
+          <h5>Markup</h5>
+          <pre><code>{{markup}}</code></pre>
+      </section>
   {{/if}}
 
   {{#if modifiers}}
@@ -39,16 +39,16 @@
           {{/if}}
 
           {{#if markup}}
-            <div class="markup">
-              <h5>Markup</h5>
-              <pre><code>{{markup}}</code></pre>
-            </div>
+              <div class="example">
+                  <h5>Example</h5>
+                  <div>{{{markup}}}</div>
+              </div>
           {{/if}}
 
           {{#if markup}}
-            <div class="example">
-              <h5>Example</h5>
-              <div>{{{markup}}}</div>
+            <div class="markup">
+              <h5>Markup</h5>
+              <pre><code>{{markup}}</code></pre>
             </div>
           {{/if}}
         </dd>
